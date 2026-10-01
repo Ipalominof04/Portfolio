@@ -1,0 +1,1 @@
+export default function Home() {return (<section id="home"><h1>Iván Palomino Fernández</h1></section>)}

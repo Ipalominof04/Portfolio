@@ -1,0 +1,1 @@
+export default function AboutMe() { return (<section id="aboutme"><h1>Sobre mi</h1></section>)}
