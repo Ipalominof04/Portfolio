@@ -1,0 +1,1 @@
+export default function Skills() { return (<section id="skils"><h1>Skills</h1></section>)}

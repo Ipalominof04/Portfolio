@@ -1,1 +1,0 @@
-export default function Habilities() { return (<section id="habilities"><h1>Habilidades</h1></section>)}

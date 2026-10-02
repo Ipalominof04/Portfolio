@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar";
 import Home from "./components/Home";
 import AboutMe from "./components/AboutMe";
 import Contact from "./components/Contact";
-import Habilities from "./components/Habilities";
+import Skills from "./components/Skills";
 import Projects from "./components/Projects";
 import Footer from './components/Footer';
 
@@ -13,12 +13,12 @@ function App()
 
   const renderSeccion = () => {
     switch (seccionActiva) {
-      case 'home': return <Home />;
+      case 'home': return <Home onCambiarSeccion={setSeccionActiva}/>;
       case 'aboutme': return <AboutMe />;
       case 'projects': return <Projects />;
-      case 'habilities': return <Habilities />;
+      case 'skills': return <Skills />;
       case 'contact': return <Contact />;
-      default: return <Home />;
+      default: return <Home onCambiarSeccion={setSeccionActiva}/>;
     }
   };
 
