@@ -15,14 +15,14 @@ const proyectos: Proyecto[] = [
     titulo: 'Mi Portafolio',
     descripcion: 'Web de presentación personal, hecha con React y TypeScript.',
     tecnologias: 'React, TypeScript, Vite',
-    urlRepo: 'https://github.com/tuusuario/portfolio',
+    urlRepo: 'https://gitlab.com/portafolio2640140/portafolio.git',
   },
   {
     id: 2,
-    titulo: 'Proyecto de ejemplo',
-    descripcion: 'Breve descripción de qué hace este proyecto.',
-    tecnologias: 'Java, Spring Boot, MySQL',
-    urlRepo: 'https://github.com/tuusuario/proyecto2',
+    titulo: 'Age of Silence',
+    descripcion: 'Proyecto final de 4 meses de duración de final de grado de DAMvi (Desarollo de aplicaciones multiplatadormas y videojuegos)',
+    tecnologias: 'C#, Unity 6, Json',
+    urlRepo: 'https://gitlab.com/ipalominof3/age-of-silence.git',
   },
 ];
 

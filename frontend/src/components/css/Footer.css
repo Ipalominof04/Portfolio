@@ -29,3 +29,16 @@
 .footer-links a:hover {
   color: #38bdf8;
 }
+
+@media (max-width: 600px) {
+  .footer-links {
+    gap: 1rem;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .footer {
+    padding: 0.5rem;
+    font-size: 0.75rem;
+  }
+}

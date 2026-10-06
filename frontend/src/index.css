@@ -48,3 +48,9 @@ section p {
   line-height: 1.6;
   color: #cbd5e1;
 }
+
+@media (max-width: 600px) {
+  section {
+    padding-top: 4rem;
+  }
+}
