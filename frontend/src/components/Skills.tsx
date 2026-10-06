@@ -4,7 +4,6 @@ import {
   SiMongodb, SiGit, SiDotnet, SiReact,
   SiJson,
   SiPython,
-  SiHtc,
   SiHtml5,
   SiCss
 } from 'react-icons/si';
