@@ -51,6 +51,6 @@ section p {
 
 @media (max-width: 600px) {
   section {
-    padding-top: 4rem;
+    padding-top: 4.5rem;
   }
 }
