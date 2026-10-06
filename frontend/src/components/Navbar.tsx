@@ -13,13 +13,13 @@ export default function Navbar({ seccionActiva, onCambiarSeccion }: NavbarProps)
     { id: 'home', label: 'Inicio' },
     { id: 'aboutme', label: 'Sobre mí' },
     { id: 'projects', label: 'Proyectos' },
-    { id: 'habilities', label: 'Skills' },
+    { id: 'skills', label: 'Skills' },
     { id: 'contact', label: 'Contacto' },
   ];
 
   const handleClickItem = (id: string) => {
     onCambiarSeccion(id);
-    setMenuAbierto(false); // cierra el menú al elegir una sección
+    setMenuAbierto(false);
   };
 
   return (
