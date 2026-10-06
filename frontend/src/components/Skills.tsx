@@ -5,7 +5,8 @@ import {
   SiJson,
   SiPython,
   SiHtml5,
-  SiCss
+  SiCss,
+  SiSpring
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
@@ -26,7 +27,7 @@ const categorias: Categoria[] = [
     skills: [
       { nombre: 'Java', icono: <FaJava />, color: '#f89820' },
       { nombre: 'Phyton', icono: <SiPython />, color: '#dff800' },
-      { nombre: 'Spring', icono: <SiJavascript />, color: '#6db33f' },
+      { nombre: 'Spring', icono: <SiSpring />, color: '#6db33f' },
       { nombre: 'C#', icono: <SiSharp />, color: '#239120' },
       { nombre: '.NET', icono: <SiDotnet />, color: '#512bd4' },
       { nombre: 'PHP', icono: <SiPhp />, color: '#777bb4' },
@@ -38,7 +39,7 @@ const categorias: Categoria[] = [
       { nombre: 'JavaScript', icono: <SiJavascript />, color: '#f7df1e' },
       { nombre: 'React', icono: <SiReact />, color: '#61dafb' },
       { nombre: 'HTML', icono: <SiHtml5 />, color: '#daa000' },
-      { nombre: 'CSS', icono: <SiCss />, color: '#1200b4' },
+      { nombre: 'CSS', icono: <SiCss />, color: '#9413cf' },
     ],
   },
   {

@@ -23,7 +23,7 @@ export default function AboutMe() {
 
       <div className="aboutme-highlights">
         <div className="highlight-card">
-          <span className="highlight-number">2</span>
+          <span className="highlight-number">1,5</span>
           <span className="highlight-label">Años de experiencia</span>
         </div>
         <div className="highlight-card">
