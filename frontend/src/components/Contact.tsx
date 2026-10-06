@@ -23,10 +23,13 @@ export default function Contact() {
     setMensajeEstado(null);
 
     try {
-      const response = await fetch('http://localhost:5207/api/contacto', {
+      const response = await fetch('https://api.web3forms.com/submit', {
         method: 'POST',
         headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
+        body: JSON.stringify({
+          access_key: '114dd78d-d0e4-40e3-980a-cbc92324caf9',
+          ...formData,
+        }),
       });
 
       if (!response.ok) throw new Error('Error en el envío');

@@ -13,7 +13,7 @@ export default function Home({ onCambiarSeccion }: HomeProps) {
         <h1>
           Desarrollador<br />Backend
         </h1>
-        <p className="home-location">ubicado en Terrassa, Barcelona.</p>
+        <p className="home-location">📍 Terrassa, Barcelona.</p>
         <a className="home-cta" onClick={() => onCambiarSeccion('contact')}>Contáctame</a>
       </div>
 

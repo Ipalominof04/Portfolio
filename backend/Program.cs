@@ -1,6 +1,7 @@
 using Microsoft.EntityFrameworkCore;
 using Portfolio.Api.Data;
 using Portfolio.Api.Models;
+using Portfolio.Api.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -8,7 +9,7 @@ builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddOpenApi();
 
 builder.Services.AddDbContext<PortfolioContext>(options =>
-    options.UseSqlite("Data Source=portfolio.db"));
+    options.UseNpgsql(builder.Configuration.GetConnectionString("DefaultConnection")));
 
 builder.Services.AddCors(options =>
 {
@@ -17,6 +18,8 @@ builder.Services.AddCors(options =>
               .AllowAnyHeader()
               .AllowAnyMethod());
 });
+
+builder.Services.AddScoped<EmailService>();
 
 var app = builder.Build();
 
@@ -29,16 +32,16 @@ using (var scope = app.Services.CreateScope())
             new Proyecto
             {
                 Titulo = "Mi Portafolio",
-                Descripcion = "Web de presentación personal, con backend en .NET y frontend en React.",
-                Tecnologias = "C#, ASP.NET Core, React, TypeScript",
-                UrlRepo = "https://github.com/tuusuario/portfolio"
+                Descripcion = "Web de presentación personal, con backend en .NET + SQLite y frontend en React.",
+                Tecnologias = "C#, ASP.NET Core,SQLite, React, TypeScript",
+                UrlRepo = "https://gitlab.com/portafolio2640140/portafolio"
             },
             new Proyecto
             {
-                Titulo = "Proyecto de ejemplo",
-                Descripcion = "Breve descripción de qué hace este proyecto.",
-                Tecnologias = "Java, Spring Boot, MySQL",
-                UrlRepo = "https://github.com/tuusuario/proyecto2"
+                Titulo = "Age of Silence",
+                Descripcion = "Proyecto de 6 meses de fin de grado hecho en Unity 3D",
+                Tecnologias = "C#, Unity 6",
+                UrlRepo = "https://gitlab.com/ipalominof3/age-of-silence"
             }
         );
         db.SaveChanges();
@@ -59,12 +62,19 @@ app.MapGet("/api/proyectos", async (PortfolioContext db) =>
     return Results.Ok(proyectos);
 });
 
-app.MapPost("/api/contacto", (ContactoRequest request) =>
+app.MapPost("/api/contacto", async (ContactoRequest request, EmailService emailService) =>
 {
-    Console.WriteLine($"Contacto recibido de {request.Nombre} ({request.Email}): {request.Mensaje}");
-    return Results.Ok(new { mensaje = "Mensaje recibido correctamente" });
+    try
+    {
+        await emailService.EnviarMensajeContactoAsync(request.Nombre, request.Email, request.Mensaje);
+        return Results.Ok(new { mensaje = "Mensaje enviado correctamente" });
+    }
+    catch (Exception ex)
+    {
+        Console.WriteLine($"Error al enviar email: {ex.Message}");
+        return Results.Problem("No se pudo enviar el mensaje");
+    }
 });
-
 app.Run();
 
 record ContactoRequest(string Nombre, string Email, string Mensaje);

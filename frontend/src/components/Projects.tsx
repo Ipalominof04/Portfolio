@@ -1,4 +1,3 @@
-import { useEffect, useState } from 'react';
 import './css/Projects.css';
 
 interface Proyecto {
@@ -10,25 +9,24 @@ interface Proyecto {
   urlDemo?: string;
 }
 
+const proyectos: Proyecto[] = [
+  {
+    id: 1,
+    titulo: 'Mi Portafolio',
+    descripcion: 'Web de presentación personal, hecha con React y TypeScript.',
+    tecnologias: 'React, TypeScript, Vite',
+    urlRepo: 'https://github.com/tuusuario/portfolio',
+  },
+  {
+    id: 2,
+    titulo: 'Proyecto de ejemplo',
+    descripcion: 'Breve descripción de qué hace este proyecto.',
+    tecnologias: 'Java, Spring Boot, MySQL',
+    urlRepo: 'https://github.com/tuusuario/proyecto2',
+  },
+];
+
 export default function Projects() {
-  const [proyectos, setProyectos] = useState<Proyecto[]>([]);
-  const [cargando, setCargando] = useState(true);
-  const [error, setError] = useState<string | null>(null);
-
-  useEffect(() => {
-    fetch('http://localhost:5207/api/proyectos')
-      .then((res) => {
-        if (!res.ok) throw new Error('Error al cargar los proyectos');
-        return res.json();
-      })
-      .then((data) => setProyectos(data))
-      .catch((err) => setError(err.message))
-      .finally(() => setCargando(false));
-  }, []);
-
-  if (cargando) return <section id="projects"><p>Cargando proyectos...</p></section>;
-  if (error) return <section id="projects"><p>{error}</p></section>;
-
   return (
     <section id="projects" className="projects-section">
       <h2>Proyectos</h2>
