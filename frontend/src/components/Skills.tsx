@@ -62,7 +62,6 @@ const categorias: Categoria[] = [
 export default function Habilities() {
   return (
     <section id="habilities" className="habilities-section">
-      <h2>Habilidades</h2>
       <div className="habilities-categorias">
         {categorias.map((categoria) => (
           <div className="categoria-bloque" key={categoria.titulo}>

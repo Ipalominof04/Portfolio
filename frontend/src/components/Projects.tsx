@@ -20,7 +20,7 @@ const proyectos: Proyecto[] = [
   {
     id: 2,
     titulo: 'Age of Silence',
-    descripcion: 'Proyecto final de 4 meses de duración de final de grado de DAMvi (Desarollo de aplicaciones multiplatadormas y videojuegos)',
+    descripcion: 'Proyecto final de 5 meses de duración de final de grado de DAMvi (Desarollo de aplicaciones multiplatadormas y videojuegos)',
     tecnologias: 'C#, Unity 6, Json',
     urlRepo: 'https://gitlab.com/ipalominof3/age-of-silence.git',
   },
