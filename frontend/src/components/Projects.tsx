@@ -7,6 +7,7 @@ interface Proyecto {
   tecnologias: string;
   urlRepo?: string;
   urlDemo?: string;
+  urlTrailer?: string;
 }
 
 const proyectos: Proyecto[] = [
@@ -23,6 +24,7 @@ const proyectos: Proyecto[] = [
     descripcion: 'Proyecto final de 5 meses de duración de final de grado de DAMvi (Desarollo de aplicaciones multiplatadormas y videojuegos)',
     tecnologias: 'C#, Unity 6, Json',
     urlRepo: 'https://gitlab.com/ipalominof3/age-of-silence.git',
+    urlTrailer: 'https://youtu.be/_EjRUlKGXOY',
   },
 ];
 
@@ -49,6 +51,11 @@ export default function Projects() {
               {proyecto.urlDemo && (
                 <a href={proyecto.urlDemo} target="_blank" rel="noopener noreferrer">
                   Demo
+                </a>
+              )}
+              {proyecto.urlTrailer && (
+                <a href={proyecto.urlTrailer} target="_blank" rel="noopener noreferrer">
+                  Trailer
                 </a>
               )}
             </div>

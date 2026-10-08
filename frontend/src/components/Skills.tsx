@@ -6,7 +6,8 @@ import {
   SiPython,
   SiHtml5,
   SiCss,
-  SiSpring
+  SiSpring,
+  SiTypescript
 } from 'react-icons/si';
 import { FaJava } from 'react-icons/fa';
 
@@ -26,7 +27,7 @@ const categorias: Categoria[] = [
     titulo: 'Backend',
     skills: [
       { nombre: 'Java', icono: <FaJava />, color: '#f89820' },
-      { nombre: 'Phyton', icono: <SiPython />, color: '#dff800' },
+      { nombre: 'Python', icono: <SiPython />, color: '#dff800' },
       { nombre: 'Spring', icono: <SiSpring />, color: '#6db33f' },
       { nombre: 'C#', icono: <SiSharp />, color: '#239120' },
       { nombre: '.NET', icono: <SiDotnet />, color: '#512bd4' },
@@ -37,6 +38,7 @@ const categorias: Categoria[] = [
     titulo: 'Frontend',
     skills: [
       { nombre: 'JavaScript', icono: <SiJavascript />, color: '#f7df1e' },
+      { nombre: 'TypeScript', icono: <SiTypescript />, color: '#1e8ef7' },
       { nombre: 'React', icono: <SiReact />, color: '#61dafb' },
       { nombre: 'HTML', icono: <SiHtml5 />, color: '#daa000' },
       { nombre: 'CSS', icono: <SiCss />, color: '#9413cf' },
