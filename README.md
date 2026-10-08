@@ -22,7 +22,7 @@ Web de presentación personal de un desarrollador backend: quién soy, qué he h
 |---|---|
 | Frontend | React 19, TypeScript, Vite, CSS, react-icons |
 | Backend (opcional, en local) | ASP.NET Core (Minimal API), Entity Framework Core, PostgreSQL, MailKit |
-| Base de datos | PostgreSQL (Neon) |
+| Base de datos | PostgreSQL |
 | Despliegue | Netlify (frontend) |
 | Formulario de contacto | Web3Forms |
 
