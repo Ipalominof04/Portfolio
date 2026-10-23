@@ -21,14 +21,16 @@ html, body, #root {
 
 section {
   height: 100vh;
-  padding-top: 5rem;
-  padding-bottom: 4rem;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+  height: 100dvh;               
+  padding-top: calc(var(--navbar-h) + 1rem);
+  padding-bottom: calc(var(--footer-h) + 1rem);
   padding-left: 2rem;
   padding-right: 2rem;
+  overflow-y: auto;               
+  display: flex;
+  flex-direction: column;
+  justify-content: safe center;   
+  align-items: center;
   text-align: center;
 }
 
@@ -49,8 +51,13 @@ section p {
   color: #cbd5e1;
 }
 
+:root {
+  --navbar-h: 3.5rem;
+  --footer-h: 4rem;
+}
+
 @media (max-width: 600px) {
-  section {
-    padding-top: 4.5rem;
+  :root {
+    --footer-h: 5rem;
   }
 }

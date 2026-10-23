@@ -6,7 +6,7 @@ export default function AboutMe() {
       <h2>Sobre mí</h2>
       <div className="aboutme-content">
         <p>
-          Soy desarrollador backend con casi dos años de experiencia, el último
+          Soy desarrollador backend con dos años de experiencia, el último
           de ellos centrado especialmente en C#. Mi formación combina{' '}
           <strong>DAM (Desarrollo de Aplicaciones Multiplataforma)</strong> y{' '}
           <strong>SMR (Sistemas Microinformáticos y Redes)</strong>, lo que me
@@ -23,7 +23,7 @@ export default function AboutMe() {
 
       <div className="aboutme-highlights">
         <div className="highlight-card">
-          <span className="highlight-number">1,5</span>
+          <span className="highlight-number">2</span>
           <span className="highlight-label">Años de experiencia</span>
         </div>
         <div className="highlight-card">
